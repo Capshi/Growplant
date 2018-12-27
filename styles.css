@@ -15,3 +15,13 @@ html {
     image-rendering: pixelated;
     image-rendering: crisp-edges;
 }
+
+#water {
+    float: right;
+    background-image: url("images/water.png");
+    width: 80px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
