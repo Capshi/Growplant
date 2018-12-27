@@ -2,7 +2,16 @@ html {
     background-color: #ffe7e7;
 }
 
-.page-title {
+#page-title {
     text-align: center;
     color: #deb1a7;
+}
+
+#plant {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
