@@ -1,12 +1,17 @@
 self.addEventListener("install", (event) => {
-    const indexPage = new Request("./");
-
     event.waitUntil(
-        fetch(indexPage).then(async (response) => {
-            const cache = await caches.open("growplant-offline");
-            console.log(`[ServiceWorker] Cached index page during Install ${response.url}`);
-
-            return cache.put(indexPage, response);
+        caches.open("growplant-offline").then((cache) => {
+            return cache.addAll(
+                [
+                    "./",
+                    "images/plant1.png",
+                    "images/plant2.png",
+                    "images/plant3.png",
+                    "images/water.png",
+                    "growplant.js",
+                    "styles.css"
+                ]
+            );
         })
     );
 });
