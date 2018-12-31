@@ -1,0 +1,16 @@
+{
+    "name": "Growplant",
+    "short_name": "GP",
+    "description": "Grow some plants.",
+    "icons": [
+        {
+            "src": "/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#d4e2be",
+    "background_color": "#B12A34"
+}
