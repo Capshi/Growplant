@@ -12,11 +12,7 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    console.log(`[ServiceWorker] Fetch ${event.request.url}`);
     event.respondWith(
-        caches.match(event.request).then((response) => {
-            console.log(`[ServiceWorker] Serving from cache ${event.request.url}`);
-            return response || fetch(event.request);
-        })
+        fetch(event.request).catch(() => caches.match(event.request))
     );
 });
