@@ -19,6 +19,8 @@ function water() {
     // clickCount++;
 
     if (clickCount === 1) {
+        plant.src = "images/plant1.png";
+    } else if (clickCount === 2) {
         plant.src = "images/plant2.png";
     } else {
         plant.src = "images/plant3.png";
